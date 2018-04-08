@@ -1,4 +1,4 @@
-package app;
+package com.ras;
 
 
 	import org.springframework.boot.SpringApplication;
@@ -21,9 +21,14 @@ package app;
 		@RestController
 		@SpringBootApplication  
 		public class Application {
-		    @RequestMapping("/index")  
+		    @RequestMapping("index")  // -> index=/index
 		    String home() {  
 		        return "Spring Boot Index!";  
+		    }  
+		    
+		    @RequestMapping("/index1")  
+		    String home1() {  
+		        return "Spring Boot Index2!";  
 		    }  
 		      
 		    public static void main(String[] args) {  
